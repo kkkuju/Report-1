@@ -1,0 +1,41 @@
+/*this program uses the funciton digital input and output to turn a RGB LED on/off using a pushbutton.
+The RG will turn on when the button is not pressed and RB will turn on when it is pressed.*/
+
+//******has 2 vairant need for github later
+
+int val = 0; // setting up an address where the on off value can be stored.
+int red = 2;
+int green = 3;
+int blue = 4;
+
+
+
+void setup() { 
+  // setup code here to run once:
+  pinMode(13, INPUT_PULLUP); //sets up the pin 13 as input pull function. pressed=1 not pressed=0
+  Serial.begin(9600);
+
+  // Declare all the pins as output
+pinMode(red, OUTPUT);
+pinMode(green, OUTPUT);
+pinMode(blue, OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  //Pull down circuit. When pressed val = 0. Rewire the circuit according to the schematic diagram for pull down.
+  val = digitalRead(13);
+
+
+  Serial.print("\t val Value = "); // print the value of (val)
+  Serial.println(val);
+  delay(100);
+
+//This sets the desired color depending on the pushbutton:
+//PB not pressed RG on PB pressed RB on
+digitalWrite(red, 1);
+digitalWrite(green, val);
+digitalWrite(blue, !val);
+
+}
