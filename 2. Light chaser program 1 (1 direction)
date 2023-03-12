@@ -1,0 +1,38 @@
+/* This program is made to test the digital output by turning 3 LEDs on and off following 
+a order to simulate the Light chaser effect. */
+
+//declare a interger value as a pin number. This eliminates the need to use the pin number in the rest of the program 
+int ledR = 13 ;
+int ledG = 12 ;
+int ledB = 11 ;
+// the setup function runs once when you press reset or power the board
+void setup() {
+  
+  //Declare the pins previously declared as a output. 
+  pinMode(ledB, OUTPUT);
+  pinMode(ledG, OUTPUT);
+  pinMode(ledR, OUTPUT);
+ 
+
+}
+
+// the loop function runs over and over again forever
+// pin 13 is connected to LED also.
+void loop() {
+  digitalWrite(ledR, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(300);                      // wait for 300ms
+  digitalWrite(ledR, LOW);   // turn the LED off by making the voltage LOW
+delay(300);
+
+    digitalWrite(ledG, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(300);                      // wait for 300ms
+  digitalWrite(ledG, LOW);   // turn the LED off by making the voltage LOW
+delay(300);
+
+    digitalWrite(ledB, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(300);                      // wait for 300ms
+  digitalWrite(ledB, LOW);   // turn the LED off by making the voltage LOW
+delay(300);
+
+}
+ 
