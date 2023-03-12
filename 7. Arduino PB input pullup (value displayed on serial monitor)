@@ -1,0 +1,27 @@
+/* This program is made to demonstrate the digital input function by showing the value of a push button using the INPUT_PULLUP function.*/
+
+//***** 3 variant of the program needs for github
+
+
+int val = 0; // setting up an address where the on off value of the button can be stored.
+
+void setup() {
+  // put your setup code here, to run once:
+
+ pinMode(13, INPUT_PULLUP);// Declare the pin 13 as a input 
+ Serial.begin(9600);// setup the serial monitor BAUD rate as 9600bps
+}
+
+
+
+void loop() {
+// put your main code here, to run repeatedly:
+//Pull up circuit. When pressed val = 0, not pressed val = 1. 
+  val = digitalRead(13);
+
+
+  Serial.print("\t val Value = "); // print the text "val Value ="
+  Serial.println(val); // print the actual value of the (val) variable 
+  delay(100);// allows a for slower transition of the value
+
+}
