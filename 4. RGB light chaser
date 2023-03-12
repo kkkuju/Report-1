@@ -19,39 +19,33 @@ void setup() {
 // the loop function runs over and over again forever
 // pin 13 is connected to LED also.
 void loop() {
-  digitalWrite(ledR, HIGH);  // turn the LED on (HIGH is the voltage level)
+  digitalWrite(ledR, HIGH);  // turn the red LED on (HIGH is the voltage level)
   delay(300);                      // wait for 300ms
   digitalWrite(ledR, LOW);   // turn the LED off by making the voltage LOW
 delay(300);
 
-    digitalWrite(ledG, HIGH);  // turn the LED on (HIGH is the voltage level)
+    digitalWrite(ledG, HIGH);  // turn the green LED on (HIGH is the voltage level)
   delay(300);                      // wait for 300ms
   digitalWrite(ledG, LOW);   // turn the LED off by making the voltage LOW
 delay(300);
 
-    digitalWrite(ledB, HIGH);  // turn the LED on (HIGH is the voltage level)
+    digitalWrite(ledB, HIGH);  // turn the blue LED on (HIGH is the voltage level)
   delay(300);                      // wait for 300ms
   digitalWrite(ledB, LOW);   // turn the LED off by making the voltage LOW
 delay(300);
 
 
-  //reverse the order of the LEDs to make the loop go backin the reversed order.
+  //white color, all pins turns on and off for the rotation.
 
+    digitalWrite(ledB, HIGH);
+    digitalWrite(ledG, HIGH);
     digitalWrite(ledB, HIGH);  
-  delay(300);                      
-  digitalWrite(ledB, LOW);   
-delay(300);
+     delay(300);
+   digitalWrite(ledB, 0);
+   digitalWrite(ledG, 0);
+   digitalWrite(ledB, 0);                      
+    delay(300);
 
-    digitalWrite(ledG, HIGH); 
-  delay(300);                      
-  digitalWrite(ledG, LOW);   
-  delay(300);
-
-    digitalWrite(ledR, HIGH);  
-  delay(300);                      
-  digitalWrite(ledR, LOW);   
-  delay(300);
-
-
+  
 
 }
